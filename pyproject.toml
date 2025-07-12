@@ -1,0 +1,27 @@
+[project]
+name = "web-scraping-siiau"
+version = "0.1.0"
+description = "Demo de Web Scraping en Python usando la oferta de UdG SIIAU"
+authors = [
+    {name = "Lord Friky", email = "daniel@lordfriky.dev"},
+    {name = "Pythonistas GDL", email = "contacto@pythonistas-gdl.org"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests (>=2.32.4,<3.0.0)",
+    "beautifulsoup4 (>=4.13.4,<5.0.0)",
+    "html5lib (>=1.1,<2.0)",
+    "ttkbootstrap (>=1.13.11,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "src"}]
+package-mode = false
+
+[tool.poetry.scripts]
+siiau-demo = "src.demo:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
